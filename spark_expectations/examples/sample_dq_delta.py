@@ -32,8 +32,8 @@ se: SparkExpectations = SparkExpectations(
 )
 
 user_conf = {
-    user_config.se_notifications_enable_email: True,
-    user_config.se_notifications_enable_custom_email_body: True,
+    user_config.se_notifications_enable_email: False,
+    user_config.se_notifications_enable_custom_email_body: False,
     user_config.se_notifications_email_smtp_host: "mailhost.com",
     user_config.se_notifications_email_smtp_port: 25,
     user_config.se_notifications_email_from: "",

@@ -81,6 +81,7 @@ def set_up_iceberg() -> SparkSession:
         .config("spark.sql.catalog.local", "org.apache.iceberg.spark.SparkCatalog")
         .config("spark.sql.catalog.local.type", "hadoop")
         .config("spark.sql.catalog.local.warehouse", "/tmp/hive/warehouse")
+        .config("spark.databricks.delta.schema.autoMerge.enabled", "true")
     ).getOrCreate()
 
     os.system("rm -rf /tmp/hive/warehouse/dq_spark_local")
